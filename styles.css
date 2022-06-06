@@ -1,0 +1,230 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f1f1f;
+    font-family: verdana;
+}
+
+#clock {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #1f1f1f;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 15px 15px rgba(0, 0, 0, 1),
+    inset 0 15px 15px rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    position: relative;
+}
+
+.time {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #a2a2a2;
+    transform: rotate(var(--rotation));
+    padding: 20px;
+}
+
+
+#clock .tictac {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 7px;
+    height: 40%;
+    background-color: white;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+}
+
+#clock .s {
+    width: 2px;
+    height: 50%;
+    background-color: red;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
+}
+
+#clock .m {
+    width: 3px;
+    height: 39%;
+    background-color: white;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.8);
+}
+
+#clock .h {
+    width: 7px;
+    height: 30%;
+    background-color: white;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+#clock::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
+}
+
+#clock li {
+    list-style-type: none;
+}
+
+
+.time span {
+    display: block;
+    color: #1c1c1c;
+    letter-spacing: .1em;
+    text-shadow: -1px -1px 1px #111,
+    2px 2px 1px grey;
+}
+
+h1.zero {
+    position: relative;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    justify-content: center;
+    align-items: center;
+    color: #1c1c1c;
+    letter-spacing: .1em;
+    text-shadow: -1px -1px 1px grey,
+    1px 1px 1px red;
+}
+
+h1.one {
+    position: relative;
+    margin-bottom: -223px;
+    margin-left: -250px;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    letter-spacing: .1em;
+    text-shadow: -1px -1px 1px #111,
+    2px 2px 1px white;
+}
+
+h1.two {
+    position: relative;
+    margin-top: -242px;
+    margin-left: 460px;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    letter-spacing: .1em;
+    text-shadow: -1px -1px 1px #111,
+    2px 2px 1px white;
+}
+
+.time:nth-child(1) {
+    transform: rotate(30deg);
+}
+
+.time:nth-child(1) span {
+    transform: rotate(-30deg);
+}
+
+.time:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+.time:nth-child(2) span {
+    transform: rotate(-60deg);
+}
+
+.time:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.time:nth-child(3) span {
+    transform: rotate(-90deg);
+}
+
+.time:nth-child(4) {
+    transform: rotate(120deg);
+}
+
+.time:nth-child(4) span {
+    transform: rotate(-120deg);
+}
+
+.time:nth-child(5) {
+    transform: rotate(150deg);
+}
+
+.time:nth-child(5) span {
+    transform: rotate(-150deg);
+}
+
+.time:nth-child(6) {
+    transform: rotate(180deg);
+}
+
+.time:nth-child(6) span {
+    transform: rotate(-180deg);
+}
+
+.time:nth-child(7) {
+    transform: rotate(210deg);
+}
+
+.time:nth-child(7) span {
+    transform: rotate(-210deg);
+}
+
+.time:nth-child(8) {
+    transform: rotate(240deg);
+}
+
+.time:nth-child(8) span {
+    transform: rotate(-240deg);
+}
+
+.time:nth-child(9) {
+    transform: rotate(270deg);
+}
+
+.time:nth-child(9) span {
+    transform: rotate(-270deg);
+}
+
+.time:nth-child(10) {
+    transform: rotate(300deg);
+}
+
+.time:nth-child(10) span {
+    transform: rotate(-300deg);
+}
+
+.time:nth-child(11) {
+    transform: rotate(330deg);
+}
+
+.time:nth-child(11) span {
+    transform: rotate(-330deg);
+}
